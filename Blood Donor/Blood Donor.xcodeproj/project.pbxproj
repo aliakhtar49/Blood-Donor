@@ -99,13 +99,13 @@
 		3AE3D4AA1D6E03D7008556CF /* Blood Donor */ = {
 			isa = PBXGroup;
 			children = (
-				3AE3D4AB1D6E03D7008556CF /* AppDelegate.swift */,
+				3AE3D4E61D6E0D11008556CF /* CoreData UI Models */,
+				3AE3D4E51D6E0CF8008556CF /* Configuration Files */,
+				3AE3D4E41D6E0CE2008556CF /* Assets */,
+				3AE3D4E31D6E0CCD008556CF /* StoryBoard */,
+				3AE3D4E21D6E0CB5008556CF /* VIPER Pattern */,
 				3AE3D4AD1D6E03D7008556CF /* ViewController.swift */,
-				3AE3D4AF1D6E03D7008556CF /* Main.storyboard */,
-				3AE3D4B51D6E03D7008556CF /* Assets.xcassets */,
-				3AE3D4B71D6E03D7008556CF /* LaunchScreen.storyboard */,
-				3AE3D4BA1D6E03D7008556CF /* Info.plist */,
-				3AE3D4B21D6E03D7008556CF /* Blood_Donor.xcdatamodeld */,
+				3AE3D4DC1D6E0BC6008556CF /* AppDelegate */,
 			);
 			path = "Blood Donor";
 			sourceTree = "<group>";
@@ -126,6 +126,94 @@
 				3AE3D4D01D6E03D7008556CF /* Info.plist */,
 			);
 			path = "Blood DonorUITests";
+			sourceTree = "<group>";
+		};
+		3AE3D4DC1D6E0BC6008556CF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3D4AB1D6E03D7008556CF /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3AE3D4DD1D6E0C72008556CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3AE3D4DE1D6E0C7D008556CF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		3AE3D4DF1D6E0C87008556CF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		3AE3D4E01D6E0C95008556CF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		3AE3D4E11D6E0CAC008556CF /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
+		3AE3D4E21D6E0CB5008556CF /* VIPER Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3D4E11D6E0CAC008556CF /* Routing */,
+				3AE3D4E01D6E0C95008556CF /* Interactor */,
+				3AE3D4DF1D6E0C87008556CF /* Presenter */,
+				3AE3D4DE1D6E0C7D008556CF /* Entity */,
+				3AE3D4DD1D6E0C72008556CF /* View */,
+			);
+			name = "VIPER Pattern";
+			sourceTree = "<group>";
+		};
+		3AE3D4E31D6E0CCD008556CF /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3D4AF1D6E03D7008556CF /* Main.storyboard */,
+				3AE3D4B71D6E03D7008556CF /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		3AE3D4E41D6E0CE2008556CF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3D4B51D6E03D7008556CF /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		3AE3D4E51D6E0CF8008556CF /* Configuration Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3D4BA1D6E03D7008556CF /* Info.plist */,
+			);
+			name = "Configuration Files";
+			sourceTree = "<group>";
+		};
+		3AE3D4E61D6E0D11008556CF /* CoreData UI Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3D4B21D6E03D7008556CF /* Blood_Donor.xcdatamodeld */,
+			);
+			name = "CoreData UI Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +278,7 @@
 		3AE3D4A01D6E03D7008556CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BD;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ali Akhtar";
@@ -486,6 +575,7 @@
 				3AE3D4D51D6E03D7008556CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AE3D4D61D6E03D7008556CF /* Build configuration list for PBXNativeTarget "Blood DonorTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +584,7 @@
 				3AE3D4D81D6E03D7008556CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AE3D4D91D6E03D7008556CF /* Build configuration list for PBXNativeTarget "Blood DonorUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +593,7 @@
 				3AE3D4DB1D6E03D7008556CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -15,6 +15,8 @@
 		3AE3D4B91D6E03D7008556CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE3D4B71D6E03D7008556CF /* LaunchScreen.storyboard */; };
 		3AE3D4C41D6E03D7008556CF /* Blood_DonorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3D4C31D6E03D7008556CF /* Blood_DonorTests.swift */; };
 		3AE3D4CF1D6E03D7008556CF /* Blood_DonorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3D4CE1D6E03D7008556CF /* Blood_DonorUITests.swift */; };
+		3AE3D4E91D6E29D1008556CF /* VIPER Pattern Usage GuidLines in Resources */ = {isa = PBXBuildFile; fileRef = 3AE3D4E81D6E29D1008556CF /* VIPER Pattern Usage GuidLines */; };
+		9EB66C30DD2CE2C34D6E240C /* Pods_Blood_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6A533A6CB0BD6BE474B18F /* Pods_Blood_Donor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		3AE3D4CA1D6E03D7008556CF /* Blood DonorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blood DonorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE3D4CE1D6E03D7008556CF /* Blood_DonorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blood_DonorUITests.swift; sourceTree = "<group>"; };
 		3AE3D4D01D6E03D7008556CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AE3D4E81D6E29D1008556CF /* VIPER Pattern Usage GuidLines */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "VIPER Pattern Usage GuidLines"; sourceTree = "<group>"; };
+		4E6A533A6CB0BD6BE474B18F /* Pods_Blood_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blood_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B850A953C0868C3D17F0549 /* Pods-Blood Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood Donor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blood Donor/Pods-Blood Donor.release.xcconfig"; sourceTree = "<group>"; };
+		846CC1CE9E1ECF0E00B705F5 /* Pods-Blood Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood Donor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blood Donor/Pods-Blood Donor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB66C30DD2CE2C34D6E240C /* Pods_Blood_Donor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		189D37D3E414CA5F99E3AF39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				846CC1CE9E1ECF0E00B705F5 /* Pods-Blood Donor.debug.xcconfig */,
+				5B850A953C0868C3D17F0549 /* Pods-Blood Donor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3AE3D49F1D6E03D7008556CF = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +99,8 @@
 				3AE3D4C21D6E03D7008556CF /* Blood DonorTests */,
 				3AE3D4CD1D6E03D7008556CF /* Blood DonorUITests */,
 				3AE3D4A91D6E03D7008556CF /* Products */,
+				189D37D3E414CA5F99E3AF39 /* Pods */,
+				6C17F7A22A0830D04B59778A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +117,8 @@
 		3AE3D4AA1D6E03D7008556CF /* Blood Donor */ = {
 			isa = PBXGroup;
 			children = (
+				3AE3D4EA1D6E2CF7008556CF /* DataStore */,
+				3AE3D4E71D6E29C1008556CF /* GuidLines */,
 				3AE3D4E61D6E0D11008556CF /* CoreData UI Models */,
 				3AE3D4E51D6E0CF8008556CF /* Configuration Files */,
 				3AE3D4E41D6E0CE2008556CF /* Assets */,
@@ -216,6 +236,29 @@
 			name = "CoreData UI Models";
 			sourceTree = "<group>";
 		};
+		3AE3D4E71D6E29C1008556CF /* GuidLines */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3D4E81D6E29D1008556CF /* VIPER Pattern Usage GuidLines */,
+			);
+			name = GuidLines;
+			sourceTree = "<group>";
+		};
+		3AE3D4EA1D6E2CF7008556CF /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataStore;
+			sourceTree = "<group>";
+		};
+		6C17F7A22A0830D04B59778A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E6A533A6CB0BD6BE474B18F /* Pods_Blood_Donor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AE3D4D31D6E03D7008556CF /* Build configuration list for PBXNativeTarget "Blood Donor" */;
 			buildPhases = (
+				3123E7136048BF292F086838 /* [CP] Check Pods Manifest.lock */,
 				3AE3D4A41D6E03D7008556CF /* Sources */,
 				3AE3D4A51D6E03D7008556CF /* Frameworks */,
 				3AE3D4A61D6E03D7008556CF /* Resources */,
+				F9E90D91B4F3DE4D0ACDE972 /* [CP] Embed Pods Frameworks */,
+				7190A5F48D0DEAE1C2F1B92F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE3D4E91D6E29D1008556CF /* VIPER Pattern Usage GuidLines in Resources */,
 				3AE3D4B91D6E03D7008556CF /* LaunchScreen.storyboard in Resources */,
 				3AE3D4B61D6E03D7008556CF /* Assets.xcassets in Resources */,
 				3AE3D4B11D6E03D7008556CF /* Main.storyboard in Resources */,
@@ -342,6 +389,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3123E7136048BF292F086838 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7190A5F48D0DEAE1C2F1B92F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blood Donor/Pods-Blood Donor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9E90D91B4F3DE4D0ACDE972 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blood Donor/Pods-Blood Donor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3AE3D4A41D6E03D7008556CF /* Sources */ = {
@@ -490,6 +585,7 @@
 		};
 		3AE3D4D41D6E03D7008556CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846CC1CE9E1ECF0E00B705F5 /* Pods-Blood Donor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Blood Donor/Info.plist";
@@ -501,6 +597,7 @@
 		};
 		3AE3D4D51D6E03D7008556CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B850A953C0868C3D17F0549 /* Pods-Blood Donor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Blood Donor/Info.plist";

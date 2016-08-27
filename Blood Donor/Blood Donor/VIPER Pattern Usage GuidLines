@@ -1,0 +1,228 @@
+VIPER PATTERN
+
+--> Interactor
+
+1) Netwiork Calls but it won’t handle the networking code directly need some helper classes for this ,  It will ask a dependency, like a network manager or API client.
+
+2)  The Interactor may have to aggregate data from multiple sources to provide the information needed to fulfill a use case.
+
+3) A data store is responsible for providing entities to an Interactor. it will need to retrieve entities from the data store, manipulate the entities, and then put the updated entities back in the data store.
+
+4) An Interactor represents a single use case in the app. It contains the business logic to manipulate model objects (Entities) to carry out a specific task
+
+5) it will need to retrieve entities from the data store, manipulate the entities, and then put the updated entities back in the data store.
+
+6) The Interactor should not know how to persist the entities either.
+
+7) Sometimes the Interactor may want to use a type of object called a data manager to facilitate its interaction with the data store.
+
+8) This allows the Interactor to focus more on application logic and not have to know anything about how entities are gathered or persisted.
+
+9) One reason to keep the data store as a distinct layer with clear boundaries is that it allows you to delay choosing a specific persistence technology. If your data store is a single class, you can start your app with a basic persistence strategy, and then upgrade to SQLite or Core Data later if and when it makes sense to do so, all without changing anything else in your application’s code base.
+
+10 ) The work done in an Interactor should be independent of any UI.
+
+11) The Interactor never passes entities to the presentation layer (i.e. Presenter).
+
+12) Interactors should not work with NSManagedObjects.
+
+13) Entities are never passed from the Interactor to the Presenter. Instead, simple data structures that have no behavior are passed from the Interactor to the Presenter. This prevents any ‘real work’ from being done in the Presenter. The Presenter can only prepare the data for display in the View.
+
+- (void)findUpcomingItems
+{
+__weak typeof(self) welf = self;
+NSDate* today = [self.clock today];
+NSDate* endOfNextWeek = [[NSCalendar currentCalendar] dateForEndOfFollowingWeekWithDate:today];
+[self.dataManager todoItemsBetweenStartDate:today endDate:endOfNextWeek completionBlock:^(NSArray* todoItems) {
+[welf.output foundUpcomingItems:[welf upcomingItemsFromToDoItems:todoItems]];
+}];
+}
+
+
+--> Presentor
+
+1) can request new data from Interactor
+
+2) Preparing View COntent
+
+3) The Presenter is a PONSO that mainly consists of logic to drive the UI.
+
+4)  It knows when to present the user interface.
+
+5) It gathers input from user interactions so it can update the UI and send requests to an Interactor.
+
+6) When the user taps the + button to add a new to-do item, addNewEntry gets called. For this action, the Presenter asks the wireframe(Routing) to present the UI for adding a new item:
+
+7) The Presenter also receives results from an Interactor and converts the results into a form that is efficient to display in a View.
+
+8)  The Presenter does not know about the existence of UILabel, UIButton, etc
+
+9) The Presenter only knows about the content it maintains and when it should be displayed.
+
+
+Below is the method that receives upcoming items from the Interactor. It will process the data and determine what to show to the user:
+
+
+- (void)foundUpcomingItems:(NSArray*)upcomingItems
+{
+if ([upcomingItems count] == 0)
+{
+[self.userInterface showNoContentMessage];
+}
+else
+{
+[self updateUserInterfaceWithUpcomingItems:upcomingItems];
+}
+}
+
+--> View
+
+1) displays what it is told to by the Presenter and relays user input back to the Presenter.
+
+2) The View is passive. It waits for the Presenter to give it content to display; it never asks the Presenter for data.
+
+3) Methods defined for a View (e.g. LoginView for a login screen) should allow a Presenter to communicate at a higher level of abstraction, expressed in terms of its content, and not how that content is to be displayed.
+
+4)  It is up to the View to determine how the content is displayed.
+
+5) The View is an abstract interface, defined in Objective-C with a protocol. A UIViewController or one of its subclasses will implement the View protocol. For example, the 'add’ screen from our example has the following interface:
+
+@protocol VTDAddViewInterface <NSObject>
+
+- (void)setEntryName:(NSString *)name;
+- (void)setEntryDueDate:(NSDate *)date;
+
+@end
+
+6) When the user taps on the cancel button, the view controller tells this event handler that the user has indicated that it should cancel the add action. That way, the event handler can take care of dismissing the add view controller and telling the list view to update.
+
+7)  the view controller could also provide methods to return signals that represent button actions. This would allow the Presenter to easily respond to those signals without breaking separation of responsibilities.
+
+--> Routing
+
+1) contains navigation logic for describing which screens are shown in which order.
+
+2) Routes from one screen to another are defined in the wireframes created by an interaction designer.
+
+3) In VIPER, the responsibility for Routing is shared between two objects: the Presenter, and the wireframe. A wireframe object owns the UIWindow, UINavigationController, UIViewController, etc. It is responsible for creating a View/ViewController and installing it in the window
+
+4) Since the Presenter contains the logic to react to user inputs, it is the Presenter that knows when to navigate to another screen, and which screen to navigate to. Meanwhile, the wireframe knows how to navigate. So, the Presenter will use the wireframe to perform the navigation. Together, they describe a route from one screen to the next.
+
+
+@implementation VTDAddWireframe
+
+- (void)presentAddInterfaceFromViewController:(UIViewController *)viewController
+{
+VTDAddViewController *addViewController = [self addViewController];
+addViewController.eventHandler = self.addPresenter;
+addViewController.modalPresentationStyle = UIModalPresentationCustom;
+addViewController.transitioningDelegate = self;
+
+[viewController presentViewController:addViewController animated:YES completion:nil];
+
+self.presentedViewController = viewController;
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate Methods
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+return [[VTDAddDismissalTransition alloc] init];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+presentingController:(UIViewController *)presenting
+sourceController:(UIViewController *)source
+{
+return [[VTDAddPresentationTransition alloc] init];
+}
+
+@end
+
+--> Entity
+
+1) Entities do not know about the data store, so entities do not know how to persist themselves.
+
+2) Entities are the model objects manipulated or use  by an Interactor.
+
+3) The Interactor never passes entities to the presentation layer (i.e. Presenter).
+
+
+
+--> DataStore
+
+1) The data store manages the persistence of the entities. Entities do not know about the data store, so entities do not know how to persist themselves.
+
+
+--> Data Manger
+
+1) The data manager handles more of the store-specific types of operations, like creating fetch requests, building queries, etc.
+
+2) One example of when it makes sense to use a data manager is when you are using Core Data, which is described below.
+
+
+
+
+
+
+
+Note:
+
+1)  Core Data is a great tool for persisting data while maintaining fast access and a low-memory footprint. But it has a habit of snaking its NSManagedObjectContext tendrils all throughout an app’s implementation files, particularly where they shouldn’t be. VIPER keeps Core Data where it should be: at the data store layer.
+
+2) But view controllers are central to the platform: they handle orientation change, respond to input from the user, integrate well with system components like navigation controllers, and now with iOS 7, allow customizable transitions between screens. They are extremely useful.
+
+3) With VIPER, a view controller does exactly what it was meant to do: it controls the view. Our to-do list app has two view controllers, one for the list screen, and one for the add screen. The add view controller implementation is extremely basic because all it has to do is control the view:
+SELECT ALL
+@implementation VTDAddViewController
+
+- (void)viewDidAppear:(BOOL)animated
+{
+[super viewDidAppear:animated];
+
+UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+action:@selector(dismiss)];
+[self.transitioningBackgroundView addGestureRecognizer:gestureRecognizer];
+self.transitioningBackgroundView.userInteractionEnabled = YES;
+}
+
+- (void)dismiss
+{
+[self.eventHandler cancelAddAction];
+}
+
+- (void)setEntryName:(NSString *)name
+{
+self.nameTextField.text = name;
+}
+
+- (void)setEntryDueDate:(NSDate *)date
+{
+[self.datePicker setDate:date];
+}
+
+- (IBAction)save:(id)sender
+{
+[self.eventHandler saveAddActionWithName:self.nameTextField.text
+dueDate:self.datePicker.date];
+}
+
+- (IBAction)cancel:(id)sender
+{
+[self.eventHandler cancelAddAction];
+}
+
+
+#pragma mark - UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+[textField resignFirstResponder];
+
+return YES;
+}
+
+4) the only two parts of the app that know that Core Data is being used are the data store itself, which sets up the Core Data stack, and the data manager. The data manager performs a fetch request, converts the NSManagedObjects returned by the data store into standard PONSO model objects, and passes those back to the business logic layer That way, the core of the application is never dependent on Core Data, and as a bonus, you never have to worry about stale or poorly threaded NSManagedObjects gunking up the works.
+
+@end
+

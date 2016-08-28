@@ -9,26 +9,38 @@
 
 import UIKit
 import GoogleMaps
+import CoreLocation
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
-class ViewController: UIViewController {
-
+    
+    var location : CLLocationManager!
+    
     override func viewDidLoad() {
+       
+        
+        
         super.viewDidLoad()
+        let camera = GMSCameraPosition.cameraWithLatitude(24.932020,
+                                                          longitude:67.111209, zoom:12)
         
         
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.cameraWithLatitude(-33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.mapWithFrame(CGRect.zero, camera: camera)
-        mapView.myLocationEnabled = true
-        view = mapView
         
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        
+        
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        let markerOfBloodBank = GMSMarker()
+        markerOfBloodBank.position = CLLocationCoordinate2DMake(24.932669, 67.111209)
+        markerOfBloodBank.appearAnimation = kGMSMarkerAnimationPop
+        let imageName = "bloodPin.png"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: 45, height: 60)
+        markerOfBloodBank.iconView = imageView
+        markerOfBloodBank.title = "Blood Bank"
+        markerOfBloodBank.map = mapView
+        self.view = mapView
+
+       // getLocation()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -36,7 +48,68 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    func getLocation() {
+        if(location == nil) {
+            location = CLLocationManager()
+            location.delegate = self
+            location.desiredAccuracy = kCLLocationAccuracyKilometer
+            location.distanceFilter = 500
+            location.startUpdatingHeading()
+        }
+    }
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        
+    }
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // If it's a relatively recent event, turn off updates to save power.
+        
+       
+        
+        
+        
+        let newLocation : CLLocation = locations.last!
+        let eventDate : NSDate = newLocation.timestamp
+        let howRecent : NSTimeInterval  = eventDate.timeIntervalSinceNow
+        if(abs(howRecent) < 15.0 ){
+            // If the event is recent, do something with it.
+            
+            
+           
+        }
+        
+        
+        
+        //Current location 
+//        let markerOfCurrentlocation = GMSMarker()
+//        markerOfCurrentlocation.position = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
+//        markerOfCurrentlocation.appearAnimation = kGMSMarkerAnimationPop
+//        let imageNameOf = "flag_icon.jpeg"
+//        let image1 = UIImage(named: imageNameOf)
+//        let imageView1 = UIImageView(image: image1!)
+//        imageView1.frame = CGRect(x: 0, y: 0, width: 56, height: 77)
+//        markerOfCurrentlocation.iconView = imageView1
+//        markerOfCurrentlocation.title = "Current Location"
+//        markerOfCurrentlocation.map = mapView
+        
+        
+        
+        
+    }
 
 }
 
+
+// Delegate method from the CLLocationManagerDelegate protocol.
+//- (void)locationManager:(CLLocationManager *)manager
+//didUpdateLocations:(NSArray *)locations {
+//    // If it's a relatively recent event, turn off updates to save power.
+//    CLLocation* location = [locations lastObject];
+//    NSDate* eventDate = location.timestamp;
+//    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+//    if (abs(howRecent) < 15.0) {
+//        // If the event is recent, do something with it.
+//        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+//               location.coordinate.latitude,
+//               location.coordinate.longitude);
+//    }
+//}

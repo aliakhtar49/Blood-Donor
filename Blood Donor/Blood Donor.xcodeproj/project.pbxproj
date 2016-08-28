@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A92E4671D71B3C30028E017 /* takeoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92E4661D71B3C30028E017 /* takeoff.png */; };
+		3A92E4691D71E5880028E017 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A92E4681D71E5880028E017 /* CoreLocation.framework */; };
+		3A9891E51D72C46A0037EBDE /* bloodPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9891E41D72C46A0037EBDE /* bloodPin.png */; };
 		3AE3D4AC1D6E03D7008556CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3D4AB1D6E03D7008556CF /* AppDelegate.swift */; };
 		3AE3D4AE1D6E03D7008556CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3D4AD1D6E03D7008556CF /* ViewController.swift */; };
 		3AE3D4B11D6E03D7008556CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE3D4AF1D6E03D7008556CF /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A92E4661D71B3C30028E017 /* takeoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = takeoff.png; path = Assets.xcassets/take_off.imageset/takeoff.png; sourceTree = "<group>"; };
+		3A92E4681D71E5880028E017 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3A9891E41D72C46A0037EBDE /* bloodPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bloodPin.png; path = ../../../../../Downloads/bloodPin.png; sourceTree = "<group>"; };
 		3AE3D4A81D6E03D7008556CF /* Blood Donor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Donor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE3D4AB1D6E03D7008556CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE3D4AD1D6E03D7008556CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A92E4691D71E5880028E017 /* CoreLocation.framework in Frameworks */,
 				9EB66C30DD2CE2C34D6E240C /* Pods_Blood_Donor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +124,8 @@
 		3AE3D4AA1D6E03D7008556CF /* Blood Donor */ = {
 			isa = PBXGroup;
 			children = (
+				3A9891E41D72C46A0037EBDE /* bloodPin.png */,
+				3A92E4661D71B3C30028E017 /* takeoff.png */,
 				3AE3D4EA1D6E2CF7008556CF /* DataStore */,
 				3AE3D4E71D6E29C1008556CF /* GuidLines */,
 				3AE3D4E61D6E0D11008556CF /* CoreData UI Models */,
@@ -254,6 +263,7 @@
 		6C17F7A22A0830D04B59778A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A92E4681D71E5880028E017 /* CoreLocation.framework */,
 				4E6A533A6CB0BD6BE474B18F /* Pods_Blood_Donor.framework */,
 			);
 			name = Frameworks;
@@ -367,6 +377,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9891E51D72C46A0037EBDE /* bloodPin.png in Resources */,
+				3A92E4671D71B3C30028E017 /* takeoff.png in Resources */,
 				3AE3D4E91D6E29D1008556CF /* VIPER Pattern Usage GuidLines in Resources */,
 				3AE3D4B91D6E03D7008556CF /* LaunchScreen.storyboard in Resources */,
 				3AE3D4B61D6E03D7008556CF /* Assets.xcassets in Resources */,

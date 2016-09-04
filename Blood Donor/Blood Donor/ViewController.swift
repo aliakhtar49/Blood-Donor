@@ -15,6 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var location : CLLocationManager!
     
+    @IBOutlet weak var menuBar: UIBarButtonItem!
     override func viewDidLoad() {
        
         
@@ -40,6 +41,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         markerOfBloodBank.map = mapView
         self.view = mapView
 
+        
+        if self.revealViewController() != nil {
+            menuBar.target = self.revealViewController()
+            menuBar.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
        // getLocation()
         // Do any additional setup after loading the view, typically from a nib.
     }

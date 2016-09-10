@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-318" y="154"/>
+            <point key="canvasLocation" x="16" y="-568"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="bbo-8V-T5g">
@@ -78,7 +78,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u4b-kl-ouF">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Search For Blood Donor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u4b-kl-ouF">
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -88,17 +88,17 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="WGD-r5-aWW" kind="custom" identifier="search" customClass="SWRevealViewControllerSeguePushController" id="1Ue-6q-xLV"/>
+                                    <segue destination="Hkh-jp-Ocb" kind="custom" identifier="search" customClass="SWRevealViewControllerSeguePushController" id="6O9-cR-SjP"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="donor" textLabel="5OD-Rl-e3t" style="IBUITableViewCellStyleDefault" id="Maw-y9-ewK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="become" textLabel="5OD-Rl-e3t" style="IBUITableViewCellStyleDefault" id="Maw-y9-ewK">
                                 <rect key="frame" x="0.0" y="116" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Maw-y9-ewK" id="oXG-1t-Dr6">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Become Donor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5OD-Rl-e3t">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Become a Blood Donor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5OD-Rl-e3t">
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -107,6 +107,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="v7l-KC-kRi" kind="custom" identifier="become" customClass="SWRevealViewControllerSeguePushController" id="JbH-70-TCv"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="request" textLabel="EgB-Od-zIw" style="IBUITableViewCellStyleDefault" id="E1N-hB-y2O">
                                 <rect key="frame" x="0.0" y="160" width="320" height="44"/>
@@ -115,7 +118,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Request Blood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EgB-Od-zIw">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Request a Blood Blood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EgB-Od-zIw">
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -124,6 +127,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nLR-gu-fee" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Aom-wT-r5y"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -150,9 +156,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGQ-GR-DRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-701" y="154"/>
+            <point key="canvasLocation" x="-349" y="-574"/>
         </scene>
-        <!--Home View-->
+        <!--Home-->
         <scene sceneID="pyu-70-MRR">
             <objects>
                 <viewController id="Tzy-5f-bbM" customClass="HomeView" customModule="Blood_Donor" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,9 +169,57 @@
                     <view key="view" contentMode="scaleToFill" id="RKC-bw-GwH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-dI-dye">
+                                <rect key="frame" x="20" y="64" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="90y-dI-SbW"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hTq-hf-wZ8">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="eAb-X1-iQg">
+                                        <rect key="frame" x="10" y="74" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-9i-HIi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="L6b-9i-HIi" secondAttribute="bottom" id="0JJ-h3-IdO"/>
+                                            <constraint firstItem="L6b-9i-HIi" firstAttribute="top" secondItem="eAb-X1-iQg" secondAttribute="top" id="6v8-EH-FZg"/>
+                                            <constraint firstAttribute="trailing" secondItem="L6b-9i-HIi" secondAttribute="trailing" id="CPW-DT-wan"/>
+                                            <constraint firstItem="L6b-9i-HIi" firstAttribute="leading" secondItem="eAb-X1-iQg" secondAttribute="leading" id="XdO-YN-qGo"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Tzy-5f-bbM" id="175-Bk-2V9"/>
+                                    <outlet property="delegate" destination="Tzy-5f-bbM" id="lLB-im-Gtk"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1Bw-dI-dye" secondAttribute="trailing" constant="20" id="Ery-9r-Hre"/>
+                            <constraint firstItem="1Bw-dI-dye" firstAttribute="leading" secondItem="RKC-bw-GwH" secondAttribute="leading" constant="20" id="Y0K-jo-m8g"/>
+                            <constraint firstItem="1Bw-dI-dye" firstAttribute="top" secondItem="E8Y-7V-fUp" secondAttribute="bottom" id="sky-w4-0wm"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tuG-sx-fN3">
+                    <navigationItem key="navigationItem" title="Home" id="tuG-sx-fN3">
                         <barButtonItem key="leftBarButtonItem" image="Image" id="6ou-Vl-SAc"/>
                     </navigationItem>
                     <connections>
@@ -174,7 +228,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LU-if-gFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-716" y="803"/>
+            <point key="canvasLocation" x="-662" y="252"/>
+        </scene>
+        <!--Become Donor-->
+        <scene sceneID="GN9-Xd-1Zc">
+            <objects>
+                <viewController storyboardIdentifier="BecomeDonorVC" id="ekK-6Y-WRx" customClass="BecomeDonorVC" customModule="Blood_Donor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J2Z-0V-9hX"/>
+                        <viewControllerLayoutGuide type="bottom" id="uJH-1A-Ri8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X65-bS-Di5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Become Donor" id="gQc-5d-KR2">
+                        <barButtonItem key="leftBarButtonItem" image="Image" id="K5t-DH-he5"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeMenu" destination="K5t-DH-he5" id="wpk-wH-3FA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0o-tS-VOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="93"/>
+        </scene>
+        <!--Request Donor-->
+        <scene sceneID="yfS-dr-BBn">
+            <objects>
+                <viewController storyboardIdentifier="RequestDonorVC" id="FH4-6V-1hd" customClass="RequestDonorVC" customModule="Blood_Donor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5JK-Or-3K4"/>
+                        <viewControllerLayoutGuide type="bottom" id="GMB-9O-81m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gft-LX-Crw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Request Donor" id="dfA-c9-mA9">
+                        <barButtonItem key="leftBarButtonItem" image="Image" id="Vzb-b8-TMU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeMenu" destination="Vzb-b8-TMU" id="Lj1-As-g9o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byv-vO-iVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="799"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k7E-6P-DTG">
@@ -193,6 +295,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgS-Ac-nOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1096" y="252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8HC-rK-Q2K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v7l-KC-kRi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zxp-dH-TyM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ekK-6Y-WRx" kind="relationship" relationship="rootViewController" id="0CA-4A-P2M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyK-kZ-RG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="93"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bcZ-Gy-meb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nLR-gu-fee" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3hX-Py-1rh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FH4-6V-1hd" kind="relationship" relationship="rootViewController" id="gww-0k-4ku"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaQ-HE-nS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="799"/>
+        </scene>
+        <!--Search Donor-->
+        <scene sceneID="TBF-yj-JML">
+            <objects>
+                <viewController storyboardIdentifier="SearchDonorVC" id="HxP-K1-kNK" customClass="SearchDonorVC" customModule="Blood_Donor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ck-cj-lym"/>
+                        <viewControllerLayoutGuide type="bottom" id="mrr-kq-62t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yUb-uM-Xq4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Donor" id="AnA-Uc-aXB">
+                        <barButtonItem key="leftBarButtonItem" image="Image" id="Xcc-xF-PTr"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeMenu" destination="Xcc-xF-PTr" id="yPb-wx-GRF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Rc-FJ-pgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="1529"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XTy-w5-jm5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hkh-jp-Ocb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l7s-6m-Fca">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HxP-K1-kNK" kind="relationship" relationship="rootViewController" id="1Wf-OL-yK3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Frh-vb-dKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="1529"/>
         </scene>
     </scenes>
     <resources>

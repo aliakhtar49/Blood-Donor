@@ -13,7 +13,7 @@
 @end
 
 NSString * const cellIdentifierList[] = {
-    @"home",@"search", @"donor" , @"request"
+    @"home",@"search", @"become" , @"request"
 };
 
 @implementation MenuViewController
@@ -40,7 +40,7 @@ NSString * const cellIdentifierList[] = {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

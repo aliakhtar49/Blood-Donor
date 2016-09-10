@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362118581D8477D000EEDB03 /* BecomeDonorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362118571D8477D000EEDB03 /* BecomeDonorVC.swift */; };
+		3621185A1D8477EA00EEDB03 /* RequestDonorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362118591D8477EA00EEDB03 /* RequestDonorVC.swift */; };
+		3621185C1D8477FA00EEDB03 /* SearchDonorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3621185B1D8477FA00EEDB03 /* SearchDonorVC.swift */; };
 		36248CEA1D7C863F00FCDB7A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36248CE71D7C863F00FCDB7A /* MenuViewController.m */; };
 		36248CEB1D7C863F00FCDB7A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36248CE91D7C863F00FCDB7A /* SWRevealViewController.m */; };
 		36248CED1D7C89FF00FCDB7A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36248CEC1D7C89FF00FCDB7A /* HomeView.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		362118571D8477D000EEDB03 /* BecomeDonorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BecomeDonorVC.swift; sourceTree = "<group>"; };
+		362118591D8477EA00EEDB03 /* RequestDonorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDonorVC.swift; sourceTree = "<group>"; };
+		3621185B1D8477FA00EEDB03 /* SearchDonorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDonorVC.swift; sourceTree = "<group>"; };
 		36248CE61D7C863F00FCDB7A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		36248CE71D7C863F00FCDB7A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		36248CE81D7C863F00FCDB7A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 				3AE3D4E31D6E0CCD008556CF /* StoryBoard */,
 				3AE3D4E21D6E0CB5008556CF /* VIPER Pattern */,
 				3AE3D4AD1D6E03D7008556CF /* ViewController.swift */,
+				3621185B1D8477FA00EEDB03 /* SearchDonorVC.swift */,
+				362118591D8477EA00EEDB03 /* RequestDonorVC.swift */,
+				362118571D8477D000EEDB03 /* BecomeDonorVC.swift */,
 				36248CEC1D7C89FF00FCDB7A /* HomeView.swift */,
 				3AE3D4DC1D6E0BC6008556CF /* AppDelegate */,
 				36248CEF1D7C92C800FCDB7A /* ObjectiveC-Bridging-Header.h */,
@@ -479,12 +488,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362118581D8477D000EEDB03 /* BecomeDonorVC.swift in Sources */,
 				3AE3D4AE1D6E03D7008556CF /* ViewController.swift in Sources */,
 				3AE3D4AC1D6E03D7008556CF /* AppDelegate.swift in Sources */,
+				3621185A1D8477EA00EEDB03 /* RequestDonorVC.swift in Sources */,
 				36248CEB1D7C863F00FCDB7A /* SWRevealViewController.m in Sources */,
 				36248CED1D7C89FF00FCDB7A /* HomeView.swift in Sources */,
 				3AE3D4B41D6E03D7008556CF /* Blood_Donor.xcdatamodeld in Sources */,
 				36248CEA1D7C863F00FCDB7A /* MenuViewController.m in Sources */,
+				3621185C1D8477FA00EEDB03 /* SearchDonorVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

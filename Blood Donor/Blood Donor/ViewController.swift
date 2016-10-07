@@ -21,14 +21,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         
         super.viewDidLoad()
-        let camera = GMSCameraPosition.cameraWithLatitude(24.932020,
+        let camera = GMSCameraPosition.camera(withLatitude: 24.932020,
                                                           longitude:67.111209, zoom:12)
         
         
         
         
         
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera:camera)
         let markerOfBloodBank = GMSMarker()
         markerOfBloodBank.position = CLLocationCoordinate2DMake(24.932669, 67.111209)
         markerOfBloodBank.appearAnimation = kGMSMarkerAnimationPop
@@ -44,7 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         if self.revealViewController() != nil {
             menuBar.target = self.revealViewController()
-            menuBar.action = "revealToggle:"
+            menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
        // getLocation()
@@ -64,10 +64,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             location.startUpdatingHeading()
         }
     }
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
     }
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // If it's a relatively recent event, turn off updates to save power.
         
        
@@ -75,8 +75,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         
         let newLocation : CLLocation = locations.last!
-        let eventDate : NSDate = newLocation.timestamp
-        let howRecent : NSTimeInterval  = eventDate.timeIntervalSinceNow
+        let eventDate : Date = newLocation.timestamp
+        let howRecent : TimeInterval  = eventDate.timeIntervalSinceNow
         if(abs(howRecent) < 15.0 ){
             // If the event is recent, do something with it.
             

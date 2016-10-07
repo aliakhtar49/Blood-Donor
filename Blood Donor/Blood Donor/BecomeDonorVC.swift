@@ -16,7 +16,7 @@ class BecomeDonorVC: UIViewController {
 
         if self.revealViewController() != nil {
             homeMenu.target = self.revealViewController()
-            homeMenu.action = "revealToggle:"
+            homeMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         // Do any additional setup after loading the view.

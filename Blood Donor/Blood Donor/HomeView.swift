@@ -19,7 +19,7 @@ class HomeView: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     
         if self.revealViewController() != nil {
             homeMenu.target = self.revealViewController()
-            homeMenu.action = "revealToggle:"
+            homeMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
@@ -32,35 +32,35 @@ class HomeView: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     let reuseIdentifier = "cell"
     var items = ["Become Donor ", "Request Donor" , "Search Donor"]
     
-        func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.items.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
 
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = UIColor.white
         let myLabel = (cell.viewWithTag(100)! as! UILabel)
-        myLabel.text = self.items[indexPath.item]
-        cell.backgroundColor = UIColor.blackColor()
-        cell.backgroundColor = UIColor.blackColor()
+        myLabel.text = self.items[(indexPath as NSIndexPath).item]
+        cell.backgroundColor = UIColor.black
+        cell.backgroundColor = UIColor.black
 
         return cell
     }
     
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         var viewControllerObj : UIViewController
         
-        switch(indexPath.item){
+        switch((indexPath as NSIndexPath).item){
             case 0:
-                viewControllerObj = (self.storyboard?.instantiateViewControllerWithIdentifier("BecomeDonorVC") as? BecomeDonorVC)!
+                viewControllerObj = (self.storyboard?.instantiateViewController(withIdentifier: "BecomeDonorVC") as? BecomeDonorVC)!
             case 1:
-                viewControllerObj = (self.storyboard?.instantiateViewControllerWithIdentifier("RequestDonorVC") as? RequestDonorVC)!
+                viewControllerObj = (self.storyboard?.instantiateViewController(withIdentifier: "RequestDonorVC") as? RequestDonorVC)!
             case 2:
-             viewControllerObj = (self.storyboard?.instantiateViewControllerWithIdentifier("SearchDonorVC") as? SearchDonorVC)!
+             viewControllerObj = (self.storyboard?.instantiateViewController(withIdentifier: "SearchDonorVC") as? SearchDonorVC)!
             default:
                 return
         }
@@ -68,12 +68,12 @@ class HomeView: UIViewController, UICollectionViewDataSource, UICollectionViewDe
         self.navigationController?.pushViewController(viewControllerObj, animated: true)
 
         // handle tap events
-        print("You selected cell #\(indexPath.item)!")
+        print("You selected cell #\((indexPath as NSIndexPath).item)!")
     }
     
-    func collectionView(collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
-        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: 100, height: 70)
     }
     

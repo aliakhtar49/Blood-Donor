@@ -18,8 +18,15 @@ class HomeView: UIViewController{
 
     
         if self.revealViewController() != nil {
-            homeMenu.target = self.revealViewController()
-            homeMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            
+            //revealViewController().rightViewRevealWidth = 150
+            homeMenu.target = revealViewController()
+            homeMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+            
+            
+          //  homeMenu.target = self.revealViewController()
+           // homeMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+           // homeMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }

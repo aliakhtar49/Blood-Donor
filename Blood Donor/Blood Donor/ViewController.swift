@@ -42,12 +42,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.view = mapView
 
         
-        if self.revealViewController() != nil {
-            menuBar.target = self.revealViewController()
-            menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-       // getLocation()
+//        if self.revealViewController() != nil {
+//            menuBar.target = self.revealViewController()
+//            menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//        }
+        getLocation()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -57,11 +57,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     func getLocation() {
         if(location == nil) {
+//            location = CLLocationManager()
+//            location!.delegate = self
+//            location!.desiredAccuracy = kCLLocationAccuracyKilometer
+//            location!.requestLocation()
+//            location!.distanceFilter = 500
+//            location!.startUpdatingLocation()
             location = CLLocationManager()
             location.delegate = self
-            location.desiredAccuracy = kCLLocationAccuracyKilometer
-            location.distanceFilter = 500
-            location.startUpdatingHeading()
+            location.desiredAccuracy = kCLLocationAccuracyBest
+            location.requestAlwaysAuthorization()
+            location.startUpdatingLocation()
         }
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

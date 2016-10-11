@@ -13,7 +13,6 @@
 		36248CEA1D7C863F00FCDB7A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36248CE71D7C863F00FCDB7A /* MenuViewController.m */; };
 		36248CEB1D7C863F00FCDB7A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36248CE91D7C863F00FCDB7A /* SWRevealViewController.m */; };
 		36248CED1D7C89FF00FCDB7A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36248CEC1D7C89FF00FCDB7A /* HomeView.swift */; };
-		36F1DC5A1D76085700299681 /* bloodPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 36F1DC591D76085700299681 /* bloodPin.png */; };
 		3A92E4671D71B3C30028E017 /* takeoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92E4661D71B3C30028E017 /* takeoff.png */; };
 		3A92E4691D71E5880028E017 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A92E4681D71E5880028E017 /* CoreLocation.framework */; };
 		3AE3D4AC1D6E03D7008556CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3D4AB1D6E03D7008556CF /* AppDelegate.swift */; };
@@ -55,7 +54,6 @@
 		36248CE91D7C863F00FCDB7A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		36248CEC1D7C89FF00FCDB7A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36248CEF1D7C92C800FCDB7A /* ObjectiveC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveC-Bridging-Header.h"; sourceTree = "<group>"; };
-		36F1DC591D76085700299681 /* bloodPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bloodPin.png; path = ../../../../Fastuni/bloodPin.png; sourceTree = "<group>"; };
 		3A92E4661D71B3C30028E017 /* takeoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = takeoff.png; path = Assets.xcassets/take_off.imageset/takeoff.png; sourceTree = "<group>"; };
 		3A92E4681D71E5880028E017 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3AE3D4A81D6E03D7008556CF /* Blood Donor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Donor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				36248CE41D7C85F400FCDB7A /* SlidebarMenu */,
-				36F1DC591D76085700299681 /* bloodPin.png */,
 				3A92E4661D71B3C30028E017 /* takeoff.png */,
 				3AE3D4EA1D6E2CF7008556CF /* DataStore */,
 				3AE3D4E71D6E29C1008556CF /* GuidLines */,
@@ -413,7 +410,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36F1DC5A1D76085700299681 /* bloodPin.png in Resources */,
 				3A92E4671D71B3C30028E017 /* takeoff.png in Resources */,
 				3AE3D4E91D6E29D1008556CF /* VIPER Pattern Usage GuidLines in Resources */,
 				3AE3D4B91D6E03D7008556CF /* LaunchScreen.storyboard in Resources */,

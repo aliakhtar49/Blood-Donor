@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -48,19 +48,19 @@
             <objects>
                 <tableViewController id="UaF-m0-9nb" customClass="MenuViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cl3-TC-yKz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="home" textLabel="Fsw-3w-V2n" style="IBUITableViewCellStyleDefault" id="6z0-v3-74a">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6z0-v3-74a" id="ZBG-pH-rJF">
-                                    <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fsw-3w-V2n">
-                                            <frame key="frameInset" minX="15" width="384" height="43.666666666666664"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,14 +73,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search" textLabel="u4b-kl-ouF" style="IBUITableViewCellStyleDefault" id="pTk-94-tIe">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pTk-94-tIe" id="wFR-Jo-DlI">
-                                    <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Search For Blood Donor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u4b-kl-ouF">
-                                            <frame key="frameInset" minX="15" width="384" height="43.666666666666664"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,14 +93,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="become" textLabel="5OD-Rl-e3t" style="IBUITableViewCellStyleDefault" id="Maw-y9-ewK">
-                                <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Maw-y9-ewK" id="oXG-1t-Dr6">
-                                    <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Become a Blood Donor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5OD-Rl-e3t">
-                                            <frame key="frameInset" minX="15" width="384" height="43.666666666666664"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,14 +113,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="request" textLabel="EgB-Od-zIw" style="IBUITableViewCellStyleDefault" id="E1N-hB-y2O">
-                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="160" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E1N-hB-y2O" id="n59-C5-zPS">
-                                    <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Request a Blood Blood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EgB-Od-zIw">
-                                            <frame key="frameInset" minX="15" width="384" height="43.666666666666664"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,7 +147,7 @@
         <scene sceneID="Bzn-Qn-xYt">
             <objects>
                 <navigationController id="WGD-r5-aWW" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lfj-G1-dR9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lfj-G1-dR9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -168,7 +168,7 @@
                         <viewControllerLayoutGuide type="bottom" id="CHr-WE-1VZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RKC-bw-GwH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ygc-1i-L4o">
@@ -380,7 +380,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uJH-1A-Ri8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X65-bS-Di5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -404,7 +404,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GMB-9O-81m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gft-LX-Crw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtv-5e-EKQ">
@@ -459,7 +459,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tfl-Xy-9gK" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tic-Zr-eS0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tic-Zr-eS0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -475,13 +475,13 @@
         <!--Advance Search-->
         <scene sceneID="yr6-9v-b7A">
             <objects>
-                <viewController title="Advance Search" id="is4-HA-6f1" sceneMemberID="viewController">
+                <viewController title="Advance Search" id="is4-HA-6f1" customClass="AdvanceSearchVC" customModule="Blood_Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VU1-9P-K12"/>
                         <viewControllerLayoutGuide type="bottom" id="rEn-0y-HVm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pfV-Ya-kLa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltH-ft-q5o">
@@ -536,7 +536,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for Blood Donor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zm4-FV-Ejc">
-                                                <color key="backgroundColor" patternImage="BAC0EE0C-9951-4EA8-B973-C7CFA2048B0C" colorSpace="pattern"/>
+                                                <color key="backgroundColor" patternImage="3A8FC9EE-20E6-4461-BC94-E3009A201C3C" colorSpace="pattern"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                                 <color key="textColor" red="1" green="0.99955955939999996" blue="0.93529940030000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -696,6 +696,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QGU-fo-JYp"/>
+                    <connections>
+                        <outlet property="bloodGroupText" destination="rjv-ZD-A37" id="pRQ-qU-2QK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oX-t5-hSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -710,7 +713,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gn9-ee-cBj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k6K-EQ-Ijl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -725,7 +728,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v7l-KC-kRi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zxp-dH-TyM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Zxp-dH-TyM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -743,7 +746,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nLR-gu-fee" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3hX-Py-1rh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3hX-Py-1rh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -765,7 +768,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mrr-kq-62t"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yUb-uM-Xq4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -785,7 +788,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hkh-jp-Ocb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l7s-6m-Fca">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="l7s-6m-Fca">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -800,7 +803,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BAC0EE0C-9951-4EA8-B973-C7CFA2048B0C" width="512" height="512">
+        <image name="3A8FC9EE-20E6-4461-BC94-E3009A201C3C" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -18357,7 +18360,7 @@ AAAAAAAQDwA
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina5_5.fullscreen"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="tdw-by-KXI"/>

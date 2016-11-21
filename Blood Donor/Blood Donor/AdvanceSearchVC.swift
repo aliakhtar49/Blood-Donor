@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdvanceSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AdvanceSearchVC: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,37 +38,16 @@ class AdvanceSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         bloodGroupText.resignFirstResponder()
     }
     
-    var bloodGroupList = ["A+", "O+", "B+" , "AB+", "A-", "O-", "B-", "AB-"]
+    let pickerTextVC = PickerTextVC()
+    
+    var bloodGroupList = ["ALL","A+", "O+", "B+" , "AB+", "A-", "O-", "B-", "AB-"]
     
     var bloodGroupPicker : UIPickerView = UIPickerView()
 
     @IBOutlet var bloodGroupText: UITextField!
     
     func populateBloodGroup(){
-        bloodGroupText.inputView = bloodGroupPicker
-        bloodGroupPicker.dataSource = self
-        bloodGroupPicker.delegate = self
-        bloodGroupPicker.selectRow(4, inComponent: 0, animated: true)
-        bloodGroupText.text = bloodGroupList[4]
+        pickerTextVC.initialize(textField: bloodGroupText, picker: bloodGroupPicker, arrayList: bloodGroupList as NSArray)
     }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        // Column count: use one column.
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView,
-                    numberOfRowsInComponent component: Int) -> Int {
-                return bloodGroupList.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView,
-                    titleForRow row: Int,
-                    forComponent component: Int) -> String? {
-                return bloodGroupList[row]
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-        bloodGroupText.text = bloodGroupList[row]
-    }
+
 }

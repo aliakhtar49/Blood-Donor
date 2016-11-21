@@ -14,6 +14,7 @@
 		36248CEB1D7C863F00FCDB7A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36248CE91D7C863F00FCDB7A /* SWRevealViewController.m */; };
 		36248CED1D7C89FF00FCDB7A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36248CEC1D7C89FF00FCDB7A /* HomeView.swift */; };
 		363B7D121DAAA09700959AC9 /* handarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 363B7D111DAAA09700959AC9 /* handarrow.png */; };
+		368A38921DE37DBA00C03804 /* PickerTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368A38911DE37DBA00C03804 /* PickerTextVC.swift */; };
 		36BAFFB21DAFFAE700121CEF /* AdvanceSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAFFB11DAFFAE700121CEF /* AdvanceSearchVC.swift */; };
 		36C5BEAB1DAE7EC000ECD69C /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C5BEAA1DAE7EC000ECD69C /* search.png */; };
 		3A92E4671D71B3C30028E017 /* takeoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92E4661D71B3C30028E017 /* takeoff.png */; };
@@ -58,6 +59,7 @@
 		36248CEC1D7C89FF00FCDB7A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36248CEF1D7C92C800FCDB7A /* ObjectiveC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveC-Bridging-Header.h"; sourceTree = "<group>"; };
 		363B7D111DAAA09700959AC9 /* handarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handarrow.png; sourceTree = "<group>"; };
+		368A38911DE37DBA00C03804 /* PickerTextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextVC.swift; sourceTree = "<group>"; };
 		36BAFFB11DAFFAE700121CEF /* AdvanceSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvanceSearchVC.swift; sourceTree = "<group>"; };
 		36C5BEAA1DAE7EC000ECD69C /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		3A92E4661D71B3C30028E017 /* takeoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = takeoff.png; path = Assets.xcassets/take_off.imageset/takeoff.png; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			);
 			name = SlidebarMenu;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		368A38901DE37D9700C03804 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				368A38911DE37DBA00C03804 /* PickerTextVC.swift */,
+			);
+			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 		3AE3D49F1D6E03D7008556CF = {
@@ -207,6 +217,7 @@
 		3AE3D4DD1D6E0C72008556CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				368A38901DE37D9700C03804 /* Custom Views */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -508,6 +519,7 @@
 				36248CEA1D7C863F00FCDB7A /* MenuViewController.m in Sources */,
 				3621185C1D8477FA00EEDB03 /* SearchDonorVC.swift in Sources */,
 				36BAFFB21DAFFAE700121CEF /* AdvanceSearchVC.swift in Sources */,
+				368A38921DE37DBA00C03804 /* PickerTextVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
